@@ -1,5 +1,8 @@
 import requests as req
 from bs4 import BeautifulSoup as bs
+import time
+
+start_time=time.time()
 
 for page in range(1,4):
     resp=req.get(f'https://www.bbc.com/zhongwen/trad/topics/c83plve5vmjt/page/{page}')
@@ -25,5 +28,6 @@ for page in range(1,4):
     print(title_list)
     print('標籤')
     print(tag_list)
-    
-    
+end_time=time.time()
+
+print(f'花費{end_time-start_time}秒')
