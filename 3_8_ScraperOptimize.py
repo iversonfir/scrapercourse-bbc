@@ -1,4 +1,3 @@
-from email import header
 import requests as req
 from bs4 import BeautifulSoup as bs
 import time
